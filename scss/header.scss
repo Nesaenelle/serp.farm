@@ -1,0 +1,104 @@
+.header {
+    background: url(../img/png/bg.jpg);
+    padding-top: 100px;
+    padding-bottom: 215px;
+    position: relative;
+    background-size: cover;
+    &:before {
+        content: '';
+        position: absolute;
+        background-image: linear-gradient(290deg, #8a8af4, #3984dd);
+        opacity: 0.75;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .container {
+        padding: 0 20px;
+        position: relative;
+        // height: 800px;
+        &.main-menu {
+            position: fixed;
+            top: 20px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            height: 90px;
+            display: flex;
+            justify-content: space-between; // padding-top: 20px;
+            // height: 90px;
+            align-items: center;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 52px 85px 0 rgba(0, 0, 0, 0.09);
+        }
+    }
+    .logo {
+        // background: red;
+        max-width: 150px; // height: 50px;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+        width: 65%;
+        margin: 128px auto 0;
+    }
+
+    &__subtitle {
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 1.63;
+        text-align: center;
+        color: #ffffff;
+        width: 60%;
+        margin: 35px auto 40px;
+    }
+    nav {
+        padding-right: 91px;
+        ul {
+            display: flex;
+            li {
+                position: relative;
+                a {
+                    display: block;
+                    padding: 36px 15px 36px 15px;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.57);
+                    font-weight: 500;
+                }
+                &.active {
+                    a {
+                        color: #3984dd;
+                    }
+                    &:after {
+                        background-image: linear-gradient(290deg, #8a8af4, #3984dd);
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        width: 100%;
+                        height: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 560px;
+        margin: auto;
+        .btn {
+            width: 265px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.input {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    outline: none;
+    width: 100%;
+    padding: 9px 20px;
+    background: #fff;
+    border-radius: 50px;
+    border: none;
+    transition: 0.1s;
+    font-family: Montserrat;
+    font-size: 20px;
+    height: 58px;
+    text-align: center;
+
+    &:focus {
+        box-shadow: 0 0 1px 0px #000;
+    }
+    &.has-error {
+      // box-shadow: none;
+      border: 2px solid #ed1c24;
+    }
+    &.valid {
+      border: 2px solid #00a651;
+    }
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #a4c7f4;
+      font-weight: 300;
+      text-align: center;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #a4c7f4;
+      font-weight: 300;
+      text-align: center;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #a4c7f4;
+      font-weight: 300;
+      text-align: center;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #a4c7f4;
+      font-weight: 300;
+      text-align: center;
+    }
+}

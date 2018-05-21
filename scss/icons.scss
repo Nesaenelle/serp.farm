@@ -1,0 +1,257 @@
+.icon {
+    display: inline-block;
+    &-profile {
+        background: url(../img/profile.png) no-repeat;
+        width: 16px;
+        height: 16px;
+        // margin-right: 5px;
+    }
+    &-out {
+        background: url(../img/out.png) no-repeat;
+        width: 16px;
+        height: 16px;
+        // margin-right: 5px;
+    }
+
+    &-locked {
+
+        background: url(../img/locked.png) no-repeat;
+        width: 14px;
+        height: 20px;
+    }
+
+    &-phone {
+        background: url(../img/phone.png) no-repeat;
+        width: 13px;
+        height: 20px;
+    }
+
+    &-profile2 {
+        background: url(../img/profile2.png) no-repeat;
+        width: 18px;
+        height: 19px;
+        margin-right: 5px;
+    }
+    &-notice {
+        background: url(../img/notice.png) no-repeat;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    &-resume {
+        background: url(../img/resume.png) no-repeat;
+        width: 22px;
+        height: 22px;
+        margin-right: 5px;
+    }
+
+    &-chosen2 {
+        background: url(../img/chosen2.png) no-repeat;
+        width: 20px;
+        height: 17px;
+        margin-right: 5px;
+    }
+    &-order {
+        background: url(../img/order.png) no-repeat;
+        width: 17px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+
+
+
+    &-write {
+        background: url(../img/write.png) no-repeat;
+        width: 23px;
+        height: 22px;
+        margin-right: 5px;
+    }
+
+    &-status {
+        background: url(../img/status.png) no-repeat;
+        width: 20px;
+        height: 24px;
+        margin-right: 5px;
+    }
+
+    &-calendar {
+        background: url(../img/calendar.png) no-repeat;
+        width: 22px;
+        height: 23px;
+        margin-right: 5px;
+    }
+    &-eye {
+        background: url(../img/eye.png) no-repeat;
+        width: 27px;
+        height: 17px;
+        margin-right: 5px;
+    }
+
+    &-comment {
+        background: url(../img/comment.png) no-repeat;
+        width: 28px;
+        height: 26px;
+        margin-right: 5px;
+    }
+    &-enddate {
+        background: url(../img/enddate.png) no-repeat;
+        width: 21px;
+        height: 22px;
+        margin-right: 5px;
+    }
+    &-do {
+        background: url(../img/do.png) no-repeat;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    &-note-small {
+        background: url(../img/note-small.png) no-repeat;
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+    }
+    &-tab {
+        background: url(../img/tab.png) no-repeat;
+        width: 23px;
+        height: 23px;
+        margin-right: 5px;
+    }
+
+
+
+
+
+    &-rewrite {
+        background: url(../img/rewrite.png) no-repeat;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+
+    &-publicate {
+        background: url(../img/publicate.png)no-repeat;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+
+    &-delete {
+        background: url(../img/delete.png)no-repeat;
+        width: 16px;
+        height: 14px;
+        margin-right: 5px;
+    }
+    &-frame {
+        background: url(../img/frame.png)no-repeat;
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+    &-statistic {
+        background: url(../img/statistic.png)no-repeat;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    &-box {
+        background: url(../img/box.png)no-repeat;
+        width: 20px;
+        height: 18px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+    &-vallet {
+
+        background: url(../img/vallet.png)no-repeat;
+        width: 20px;
+        height: 23px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+    &-vallet-red {
+        background: url(../img/vallet-red.png)no-repeat;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+
+    &-add {
+        background: url(../img/add.png)no-repeat;
+        width: 20px;
+        height: 23px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+    &-marker {
+
+        background: url(../img/marker.png)no-repeat;
+        width: 20px;
+        height: 23px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+    &-marker-red {
+        background: url(../img/marker-red.png)no-repeat;
+        width: 16px;
+        height: 18px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+    &-datepicker-red {
+        background: url(../img/datepicker-red.png)no-repeat;
+        width: 16px;
+        height: 18px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+    &-exp-red {
+        background: url(../img/exp-red.png)no-repeat;
+        width: 16px;
+        height: 18px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+    &-category-red {
+        background: url(../img/category-red.png)no-repeat;
+        width: 16px;
+        height: 18px;
+        margin-right: 5px;
+        background-size: contain;
+    }
+
+    &-fb {
+        background: url(../img/facebook.png) no-repeat;
+        width: 9px;
+        height: 18px;
+        background-size: contain;
+    }
+    &-inst {
+        background: url(../img/insta.png) no-repeat;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+    }
+    &-vk {
+        background: url(../img/vk.png) no-repeat;
+        width: 18px;
+        height: 10px;
+        background-size: contain;
+    }
+    &-tw {
+        background: url(../img/twitter.png) no-repeat;
+        width: 16px;
+        height: 13px;
+        background-size: contain;
+    }
+    &-rating {
+        background: url(../img/rating.png) no-repeat;
+        width: 22px;
+        height: 22px;
+        background-size: contain;
+    }
+}

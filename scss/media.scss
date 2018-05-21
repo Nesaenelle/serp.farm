@@ -1,0 +1,61 @@
+.desktop {
+    display: flex;
+}
+
+.mobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 980px) {
+	.header nav ul {
+		display: none;
+	}
+
+	.benefits-block{
+		&__list {
+			&__item {
+				width: 100%;
+			}
+		}
+		&__megabytes__item{
+			&__name {
+				font-size: 60px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+  	
+
+}
+@media screen and (max-width: 600px) {
+  
+}
+
+@media screen and (max-width: 480px) {
+    	.thx {
+    		.container {
+    			padding: 0px;
+    		}
+    		&__title {
+    			font-size: 24px;
+    		}
+    		&__follow {
+    			padding-top: 20px;
+    			font-size: 24px;
+    		}
+    		&__descr {
+    			width: 90%;
+    		}
+    		&__socials {
+    			width: 180px;
+    		}
+    	}
+ 
+}
