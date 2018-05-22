@@ -3,7 +3,7 @@ function isScrolledIntoView(elem) {
     var docViewBottom = docViewTop + window.innerHeight;
     var elemTop = offset(elem).top;
     var elemBottom = elemTop + elem.clientHeight;
-    return /*docViewTop >= elemTop - window.innerHeight;//*/ ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    return docViewTop >= elemTop - 200/*- window.innerHeight*/; // /((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 function offset(el) {
@@ -38,9 +38,9 @@ function isInViewport(el) {
 
     window.addEventListener('scroll', function() {
         tabs.forEach(function(elem) {
-            if (isInViewport(elem)) {
+            // if (isInViewport(elem)) {
+            if (isScrolledIntoView(elem)) {
                 var id = elem.getAttribute('data-navigation');
-                console.log(id);
 
                 var links = document.querySelectorAll('[data-navigation-link');
                 links.forEach(function(link) {
@@ -76,19 +76,17 @@ function isInViewport(el) {
     }
 
     window.addEventListener('scroll', function() {
-        counterItems.forEach(function(counter) {
-            if (isScrolledIntoView(counter) && trigerred <= counterItems.length) {
-                // console.log(1);
-                var count = counter.getAttribute('data-counter');
-                var value = counter.getAttribute('data-counter-value');
-                animateValue(counter, 0, parseInt(count), 2000, value);
-                trigerred++;
-            }
-        });
+        if (isScrolledIntoView(counterItems[0])) {
+            counterItems.forEach(function(counter) {
+                if (trigerred <= counterItems.length) {
+                    var count = counter.getAttribute('data-counter');
+                    var value = counter.getAttribute('data-counter-value');
+                    animateValue(counter, 0, parseInt(count), 2000, value);
+                    trigerred++;
+                }
+            });
+        }
     }, false);
-
-
-
 }());
 
 (function() {
@@ -121,4 +119,67 @@ function isInViewport(el) {
         var reg = new RegExp(pattern);
         return pattern ? reg.test(control.value) : true;
     }
+}());
+
+
+(function() {
+    var burgerBtn = document.querySelector('.header__burger');
+    var dropdown = document.querySelector('.header__burger__dropdown');
+
+    dropdown.querySelector('.header__burger__dropdown__close').addEventListener('click', function(e) {
+        dropdown.classList.remove('opened');
+    }, false);
+
+    burgerBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (dropdown.classList.contains('opened')) {
+            dropdown.classList.remove('opened');
+        } else {
+            dropdown.classList.add('opened');
+        }
+    }, false);
+    window.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('opened');
+        }
+    }, false);
+}());
+
+(function() {
+    var counterItems = document.querySelectorAll('[data-paralax]');
+    var images = document.querySelector('.sitemanager-block__site-images');
+
+    window.addEventListener('scroll', function(e) {
+        if (isInViewport(images)) {
+            counterItems.forEach(function(item) {
+                var val = (offset(images).top - window.pageYOffset) / 2 * parseFloat(item.getAttribute('data-paralax')); //checkScrollSpeed() + 'px';
+                item.style.transform = 'translateY(' + val + 'px)'
+            });
+        }
+    });
+
+    var checkScrollSpeed = (function(settings) {
+        settings = settings || {};
+
+        var lastPos, newPos, timer, delta,
+            delay = settings.delay || 50; // in "ms" (higher means lower fidelity )
+
+        function clear() {
+            lastPos = null;
+            delta = 0;
+        }
+
+        clear();
+
+        return function() {
+            newPos = window.scrollY;
+            if (lastPos != null) { // && newPos < maxScroll 
+                delta = newPos - lastPos;
+            }
+            lastPos = newPos;
+            clearTimeout(timer);
+            timer = setTimeout(clear, delay);
+            return delta;
+        };
+    })();
 }());

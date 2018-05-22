@@ -44,14 +44,14 @@ body {
     font-size: 32px;
     line-height: 1.22;
     color: #000;
-    font-weight: 600;
-    // text-align: center;
+    font-weight: 600; // text-align: center;
 }
 
 .what-is-block {
     .container {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__left {
         width: 63%;
@@ -62,7 +62,7 @@ body {
         }
     }
     &__right {
-        width: 43%;
+        width: 37%;
     }
     &__title {
         margin-top: 115px;
@@ -187,10 +187,11 @@ body {
 
 .sitemanager-block {
     .container {
-        margin-top: 152px;
+        margin-top: 100px;
         display: flex;
         flex-wrap: wrap;
         padding: 0 100px;
+        justify-content: space-between;
     }
     .cooming-soon {
         font-size: 36px;
@@ -231,18 +232,20 @@ body {
             position: absolute;
             width: 100%;
             &:nth-child(1) {
-                max-width: 30%;
-                left: 0;
-                top: 100px;
+                max-width: 47%;
+                left: 22px;
+                top: 99px;
             }
             &:nth-child(2) {
-                max-width: 50%;
-                left: 100px;
-                bottom: 0;
+                max-width: 84%;
+                left: 85px;
+                top: 170px;
             }
             &:nth-child(3) {
-                max-width: 30%;
-                right: 0;
+                max-width: 43%;
+                right: -94px;
+                top: -8px;
+                z-index: -1;
             }
         }
     }
@@ -282,55 +285,77 @@ body {
         justify-content: space-between;
     }
     &__left {
-        width: 41%;
+        width: 50%;
     }
     &__right {
-        width: 41%;
+        width: 39%;
     }
     &__descr {
         font-size: 16px;
         line-height: 1.63;
         margin-top: 31px;
-        color: rgba(0,0,0,.57);
+        color: rgba(0, 0, 0, .57);
         font-weight: 500;
-            width: 77%;
+        width: 77%;
     }
     &__images {
         position: relative;
         height: 100%;
         img {
-            position: absolute;
+            // position: absolute;
             width: 100%;
-            &:nth-child(1) {
-                max-width: 30%;
-                left: 0;
-                top: 100px;
-            }
-            &:nth-child(2) {
-                max-width: 50%;
-                left: 100px;
-                bottom: 0;
-            }
-            &:nth-child(3) {
-                max-width: 30%;
-                right: 0;
-            }
+            // &:nth-child(1) {
+            //     max-width: 240px;
+            //     left: 37px;
+            //     top: 34px;
+            //     z-index: 4;
+            // }
+            // &:nth-child(2) {
+            //     max-width: 500px;
+            //     left: -59px;
+            //     top: 294px;
+            //     z-index: 3;
+            // }
+            // &:nth-child(3) {
+            //     max-width:450px;
+            //     left: 152px;
+            //     top: 136px;
+            //     z-index: 2;
+            // }
+            // &:nth-child(4) {
+            //     max-width: 450px ;
+            //     left: 127px;
+            //     z-index: 1;
+            //     top: 26px;
+            // }
         }
     }
 }
 
 .how-much-block {
-    margin-top: 240px;
-        padding-bottom: 20px;
+    margin-top: 0px;
+    padding-bottom: 20px;
     .container {
         padding: 0 0 35px 0;
     }
     .common-title {
         text-align: center;
     }
-    img {
-        width: 100%;
-        margin-top: 22px;
+    &__img {
+        &__1 { 
+            width: 100%;
+            margin-top: 22px;
+        }
+        &__2 {
+            width: 90%;
+            display: none;
+            margin: 20px auto 0;
+        }
+        &__3 {
+            width: 90%;
+            display: none;
+            margin: 20px auto 0;
+        }
     }
 }
 
@@ -367,7 +392,7 @@ body {
 
     form {
         margin-top: 67px;
-        width: 51%;
+        max-width: 440px;
     }
 }
 
@@ -422,6 +447,8 @@ body {
         }
     }
 }
+
+
 
 
 
