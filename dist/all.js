@@ -1,9 +1,9 @@
-function isScrolledIntoView(elem) {
+function isScrolledIntoView(elem , offsetVal) {
     var docViewTop = window.pageYOffset;
     var docViewBottom = docViewTop + window.innerHeight;
     var elemTop = offset(elem).top;
     var elemBottom = elemTop + elem.clientHeight;
-    return docViewTop >= elemTop - 200/*- window.innerHeight*/; // /((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    return docViewTop >= elemTop - (offsetVal || 200)/*- window.innerHeight*/; // /((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 function offset(el) {
@@ -76,7 +76,7 @@ function isInViewport(el) {
     }
 
     window.addEventListener('scroll', function() {
-        if (isScrolledIntoView(counterItems[0])) {
+        if (isScrolledIntoView(counterItems[0], window.innerHeight - 150)) {
             counterItems.forEach(function(counter) {
                 if (trigerred <= counterItems.length) {
                     var count = counter.getAttribute('data-counter');

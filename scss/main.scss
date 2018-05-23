@@ -20,7 +20,7 @@ body {
     cursor: pointer;
     transition: 0.2s;
     font-size: 18px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: #3d84de;
     height: 58px;
     &:hover {
@@ -71,6 +71,7 @@ body {
         color: rgba(0, 0, 0, 0.9);
     }
     &__subtitle {
+        margin-top: 31px;
         font-size: 16px;
         line-height: 1.63;
         color: rgba(0, 0, 0, 0.57);
@@ -251,6 +252,7 @@ body {
     }
 
     &__list {
+        margin-top: 20px;
         &__item {
             font-weight: 500;
             font-size: 16px;
@@ -265,6 +267,7 @@ body {
             }
             img {
                 width: 50px;
+                min-width: 50px;
                 margin-right: 12px;
             }
         }
@@ -378,6 +381,7 @@ body {
         text-align: center;
         color: #ffffff;
         margin: auto;
+        width: 100%;
     }
 
     &__subtitle {
@@ -388,6 +392,7 @@ body {
         color: #ffffff;
         margin: auto;
         margin-top: 13px;
+        width: 100%;
     }
 
     form {
