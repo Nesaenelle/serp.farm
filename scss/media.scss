@@ -1,5 +1,5 @@
 .desktop {
-    display: flex;
+    display: block;
 }
 
 .mobile {
@@ -139,6 +139,14 @@
 }
 
 @media screen and (max-width: 600px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
     .header .container.main-menu {
         height: 40px;
     }
@@ -276,7 +284,7 @@
     .guarantee-block {
         .container {
             margin-top: 40px;
-               flex-direction: column-reverse;
+            flex-direction: column-reverse;
         }
         .common-title {
             text-align: center;
@@ -285,11 +293,12 @@
             }
         }   
         &__images {
-            margin-top: 40px;
+            margin-top: 20px;
             transform: none!important;
             // display: none;
         }
         &__descr {
+            margin-top: -40px;
             width: 100%;
             font-size: 16px;
             text-align: center;
@@ -301,7 +310,7 @@
         }
     }
     .how-much-block {
-        margin-top: 0px;
+        margin-top: 60px;
     }
 
     .bottom-footer .container {
